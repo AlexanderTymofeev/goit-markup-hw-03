@@ -23,6 +23,7 @@ Header - белый #FFFFFF
   --ourteam-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --hero-background-color: #2f303a;
+  --white-background-color: #ffffff;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -42,6 +43,17 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .section {
@@ -114,7 +126,7 @@ span {
 }
 .contacts-link:hover,
 .contacts-link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .container-header {
@@ -169,7 +181,7 @@ h1 {
 }
 
 .hero-button {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
@@ -182,6 +194,8 @@ h1 {
   margin-top: 30px;
 
   padding: 10px 32px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   border-radius: 4px;
 
@@ -214,7 +228,22 @@ h1 {
 .peculiarities-list {
   list-style: none;
   display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
 }
+.peculiarities-link {
+  width: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.peculiarities-heading {
+  margin-bottom: 10px;
+}
+
+/* .peculiarities-link:not(:last-child) {
+  margin-right: 30px;
+} */
 
 .peculiarities-heading {
   font-weight: bold;
@@ -236,10 +265,6 @@ h1 {
   color: var(--primary-text-color);
 }
 
-.peculiarities-link:not(:last-child) {
-  margin-right: 30px;
-}
-
 /* ОСОБЕННСТИ (PECULIARITIES) END */
 
 /* RUBRICS */
@@ -259,7 +284,15 @@ h1 {
 .rubrics-examples {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  margin-top: -30px;
+  margin-left: -30px;
+  max-width: calc((100% - 90px) / 3);
+}
+
+.rubrics-image {
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .our-work {
@@ -270,14 +303,31 @@ h1 {
 .rubrics-team {
   list-style: none;
   display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+  width: calc((100% - 120px) / 4);
 }
+
+.team-item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* .team-item:not(:last-child) {
+  margin-right: 30px;
+} */
 
 .team {
   background-color: var(--ourteam-background-color);
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
+.staff-signature {
+  background-color: var(--white-background-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .staff-names {
@@ -288,7 +338,6 @@ h1 {
   text-align: center;
   letter-spacing: 0.03em;
 
-  margin-top: 30px;
   margin-bottom: 10px;
 
   color: var(--secondary-text-color);
@@ -305,12 +354,23 @@ h1 {
   color: var(--primary-text-color);
 }
 
+.images {
+  display: block;
+}
+
 /* RUBRICS END */
+
+/* WORK-EXAMPLES */
+
+.work-examples {
+  display: flex;
+  flex-direction: column;
+}
 
 /* FOOTER */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-background-color);
 }
 
 .footer-container {
@@ -361,6 +421,9 @@ h1 {
 
 .filter {
   list-style: none;
+  display: flex;
+  margin-bottom: 34px;
+  justify-content: center;
 }
 
 .filter-button {
@@ -376,10 +439,14 @@ h1 {
   cursor: pointer;
 }
 
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-button:hover,
 .filter-button:focus {
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--third-text-color);
+  background-color: var(--accent-color);
 }
 
 .example-items {
@@ -394,6 +461,29 @@ h1 {
 
 .example-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.portfolio-image {
+  display: block;
+}
+
+.example-pictures {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: calc((100% - 90px) / 3);
+}
+
+.example-picture-signature {
+  background-color: var(--white-background-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: 1px solid #eeeeee;
 }
 
 .example-links {
@@ -416,5 +506,5 @@ h1 {
 
 .mail-phone:hover,
 .mail-phone:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
