@@ -302,12 +302,12 @@ h1 {
   display: flex;
   margin-top: -30px;
   margin-left: -30px;
-  width: calc((100% - 120px) / 4);
 }
 
 .team-item {
   margin-top: 30px;
   margin-left: 30px;
+  width: calc((100% - 120px) / 4);
 }
 
 /* .team-item:not(:last-child) {
@@ -509,4 +509,8 @@ h1 {
 .mail-phone:hover,
 .mail-phone:focus {
   color: var(--accent-color);
+}
+
+img {
+  display: block;
 }
