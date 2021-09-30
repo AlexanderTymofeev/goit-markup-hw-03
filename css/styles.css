@@ -18,7 +18,7 @@ Header - белый #FFFFFF
   --footer-links-color: #ffffff99;
   --accent-color: #2196f3;
 
-  --primary-background-color: #e5e5e5;
+  --primary-background-color: #ffffff;
   --header-background-color: #ffffff;
   --ourteam-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
@@ -74,6 +74,8 @@ ol {
 .header {
   background-color: var(--header-background-color);
   border-bottom: 1px solid #ececec;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-logo {
@@ -88,10 +90,6 @@ ol {
 
 span {
   color: var(--accent-color);
-}
-
-.header-nav {
-  list-style: none;
 }
 
 .nav-link {
@@ -136,8 +134,7 @@ span {
 
 .header-nav {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  list-style: none;
 }
 
 .header-contacts {
@@ -152,7 +149,7 @@ span {
   margin-right: 50px;
 }
 
-.header-mail {
+.header-mail:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -287,12 +284,12 @@ h1 {
   /* justify-content: space-between; */
   margin-top: -30px;
   margin-left: -30px;
-  max-width: calc((100% - 90px) / 3);
 }
 
 .rubrics-image {
   margin-top: 30px;
   margin-left: 30px;
+  max-width: calc((100% - 90px) / 3);
 }
 
 .our-work {
@@ -371,6 +368,7 @@ h1 {
 
 .footer {
   background-color: var(--footer-background-color);
+  padding-top: 60px;
 }
 
 .footer-container {
@@ -387,7 +385,6 @@ h1 {
   line-height: 1.19;
   letter-spacing: 0.03em;
 
-  padding-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -437,6 +434,10 @@ h1 {
   color: var(--secondary-text-color);
 
   cursor: pointer;
+
+  border: transparent;
+
+  padding: 6px 22px;
 }
 
 .filter-item:not(:last-child) {
@@ -488,6 +489,7 @@ h1 {
 
 .example-links {
   text-decoration: none;
+  display: block;
 }
 
 .example-paragraph {
